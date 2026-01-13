@@ -1,6 +1,3 @@
-
-
-
 export const translations = {
   en: {
     appTitle: "SSC Virtual Physics Lab",
@@ -28,7 +25,7 @@ export const translations = {
 
     // Topics - Measurement
     vernier: "Vernier Caliper",
-    screwGauge: "Screw Gauge",
+    screw: "Screw Gauge",
     ruler: "Meter Scale",
 
     // Topics - Motion
@@ -248,7 +245,7 @@ export const translations = {
 
     // Topics - Measurement
     vernier: "ভার্নিয়ার ক্যালিপার্স",
-    screwGauge: "স্ক্রু (মাইক্রোমিটার)",
+    screw: "স্ক্রু (মাইক্রোমিটার)",
     ruler: "মিটার স্কেল",
 
     // Topics - Motion
