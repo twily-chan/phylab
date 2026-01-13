@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SSC Virtual Physics Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sky: { 300: '#7dd3fc', 400: '#38bdf8', 900: '#0c4a6e' },
+                        grass: { 500: '#10b981', 600: '#059669' },
+                        soil: { 500: '#b45309' }
+                    },
+                    boxShadow: {
+                        '3d': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'inner-strong': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #f8fafc; }
+        .perspective-container { perspective: 1200px; overflow: hidden; }
+        .preserve-3d { transform-style: preserve-3d; }
+        
+        /* Realistic Sky Gradient */
+        .sky-gradient { background: linear-gradient(to bottom, #0ea5e9 0%, #bae6fd 60%, #e0f2fe 100%); }
+        
+        /* Realistic Ground */
+        .ground-grid {
+            background-color: #ecfdf5;
+            background-image: 
+                linear-gradient(#059669 1px, transparent 1px),
+                linear-gradient(90deg, #059669 1px, transparent 1px);
+            background-size: 100px 100px;
+            background-position: center;
+        }
+
+        input[type=range] { -webkit-appearance: none; background: #cbd5e1; height: 6px; border-radius: 4px; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #2563eb; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
