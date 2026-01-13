@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# SSC Physics Virtual Lab
 
-This contains everything you need to run your app locally.
+A high-performance, interactive physics laboratory for secondary school students.
 
-View your app in AI Studio: https://ai.studio/apps/drive/12unjG72ICO3Wnfu2wBKpP-slS3KSQ9LC
+## Features
+- **Simulation Engine:** Real-time physics engine using Euler integration.
+- **Hierarchical Navigation:** Chapter > Topic > Lab workflow.
+- **Bilingual:** Full support for English and Bangla.
 
-## Run Locally
+## Deployment to GitHub Pages
 
-**Prerequisites:**  Node.js
+This project is configured to deploy automatically using GitHub Actions.
 
+### Step 1: Push Code
+Upload all files in this folder to a GitHub repository (main branch).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Step 2: Configure Repository
+1. Go to your repository **Settings**.
+2. Click **Pages** in the left sidebar.
+3. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+   *(Note: Do not select "Deploy from a branch". We are using the custom workflow defined in `.github/workflows/deploy.yml`)*.
+
+### Step 3: Wait & Visit
+1. Go to the **Actions** tab in your repository.
+2. You will see a workflow named "Deploy to GitHub Pages" running.
+3. Once it shows a green checkmark, your site is live! The URL will be shown in the deployment logs (usually `https://yourusername.github.io/repo-name/`).
+
+## Local Development (Optional)
+If you want to run this on your own machine:
+
+1. Install Node.js.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the local server.
